@@ -73,7 +73,7 @@ function expandPic(){
 				if (j !== i) {
 					otherPics.push(pictures[j])
 				};
-				otherPics.push(pictures[6]) // WHAT THE FUCK?!!!?!?
+				otherPics.push(pictures[5]) // WHAT THE FUCK?!!!?!?
 			};
 			$(otherPics).hide();
 			$(".expanded").fadeIn(250);
