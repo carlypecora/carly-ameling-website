@@ -1,7 +1,3 @@
-.cam {
-	z-index: -1; position: relative;
-}
-
 .navbar-brand {
 	font-family: Fahkwang;
 	margin: 0 auto;
@@ -26,13 +22,9 @@ header {
 	background-position: right;
 }
 
-header:hover {
-	font-weight: bold;
-}
-
 body {
 	background: url("niv-rozenberg-358050-unsplash.jpg") no-repeat;
-	width: 100%;
+	background-size: cover;
 }
 
 .firstPage{
