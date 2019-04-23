@@ -63,28 +63,19 @@ function slideShow(){
 }
 
 function expandPic(){
-	var pictures = document.querySelectorAll(".foo");
-	for (i = 0; i < pictures.length; i++) {
-		pictures[i].addEventListener("click", function(){
-			this.classList.add("expanded");
-			otherPics = []
-			for (j = 0; j < pictures.length; j++) {
-				console.log("j: "+j)
-				if (j !== i) {
-					otherPics.push(pictures[j])
-				};
-				otherPics.push(pictures[5]) // WHAT THE FUCK?!!!?!?
-			};
-			$(otherPics).hide();
-			$(".expanded").fadeIn(250);
-			$(".close").css("display", "block");
-		});
-	};	
+	$(".pic").on("click", function(){
+		$(this).addClass("expanded");
+		$(this).removeClass("foo")
+		$(".expanded").fadeIn(250);
+		$(".foo").hide()
+		$(".close").css("display", "block");
+	});
 };
 
 function closeExpandedPic(){	
 	$(".close").on("click", function(){
-		$(".foo").removeClass("expanded");
+		$(".expanded").addClass("foo")
+		$(".pic").removeClass("expanded");
   		$(".foo").show();
   		$(".close").css("display", "none");
   	})
