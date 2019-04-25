@@ -9,25 +9,40 @@ function init() {
 	showHeader();
 }
 
+// function mapNavToPage(){
+// 	var items = document.querySelectorAll(".navbar-brand");
+// 	var content = document.querySelectorAll(".ameling");
+// 	var firstPage = document.getElementsByClassName("firstPage");
+// 	for (i=0; i<items.length;i++){
+// 		items[i].addEventListener("click", function(){
+// 			var clickedItem = this.text;
+// 			var clickedItemLower = clickedItem.toLowerCase()
+// 			var firstPage = document.querySelector(".firstPage")
+// 			for (i=0; i<content.length;i++) {
+// 				if (content[i].id === clickedItemLower){
+// 					content[i].style.display = "block";
+// 					firstPage.style.display = "none";
+// 				} else {
+// 					content[i].style.display = "none";
+// 				}
+// 			}
+// 		})
+// 	}
+// }
+
 function mapNavToPage(){
-	var items = document.querySelectorAll(".navbar-brand");
-	var content = document.querySelectorAll(".ameling");
-	var firstPage = document.getElementsByClassName("firstPage");
-	for (i=0; i<items.length;i++){
-		items[i].addEventListener("click", function(){
-			var clickedItem = this.text;
-			var clickedItemLower = clickedItem.toLowerCase()
-			var firstPage = document.querySelector(".firstPage")
-			for (i=0; i<content.length;i++) {
-				if (content[i].id === clickedItemLower){
-					content[i].style.display = "block";
-					firstPage.style.display = "none";
-				} else {
-					content[i].style.display = "none";
-				}
-			}
-		})
-	}
+	$(".navbar-brand").on("click", function(){
+		var clickedItem = this.text.toLowerCase()
+		var pages = document.querySelectorAll(".ameling")
+		for(var i = 0; i < pages.length; i++){
+			if (clickedItem === pages[i].id) {
+				$(pages[i]).css("display", "block")
+				$(".firstPage").css("display", "none")
+			} else {
+				$(pages[i]).css("display", "none")
+			};
+		};
+	})
 }
 
 function showHeader(){
@@ -38,14 +53,14 @@ function showHeader(){
 	
 
 function homeBtn(){
-	var navBtns = document.querySelectorAll(".navbar-brand");
-	var homeBtn = document.querySelector(".firstNav");
-		$(navBtns).on("click", function(){
-			if(this !== homeBtn){
-				$(".firstPage").css("display", "none");
-			} else {
-				$(".firstPage").css("display", "block");
-		};
+	// var homeBtn = document.querySelector(".firstNav");
+		$(".navbar-brand").on("click", function(){
+		// 	if(this !== homeBtn){
+		// 		$(".firstPage").css("display", "none");
+		// 	} else {
+		// 		$(".firstPage").css("display", "block");
+		// };
+		this == $(".firstNav") ? $(".firstPage").css("display", "block") : $(".firstPage").css("display", "none")
 	});
 }
 
