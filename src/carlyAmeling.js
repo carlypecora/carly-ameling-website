@@ -2,7 +2,7 @@ init();
 
 function init() {
 	mapNavToPage();
-	homeBtn();
+	// homeBtn();
 	slideShow();
 	expandPic();
 	closeExpandedPic();
@@ -19,6 +19,7 @@ function mapNavToPage(){
 				$(".firstPage").css("display", "none")
 			} else {
 				$(pages[i]).css("display", "none")
+				$(".firstPage").css("display", "block")
 			};
 		};
 	})
@@ -31,16 +32,16 @@ function showHeader(){
 }
 	
 
-function homeBtn(){
-	var homeBtn = document.querySelector(".firstNav");
-		$(".navbar-brand").on("click", function(){
-			if(this !== homeBtn){
-				$(".firstPage").css("display", "none");
-			} else {
-				$(".firstPage").css("display", "block");
-		};
-	});
-}
+// function homeBtn(){
+// 	var homeBtn = document.querySelector(".firstNav");
+// 		$(".navbar-brand").on("click", function(){
+// 			if(this !== homeBtn){
+// 				$(".firstPage").css("display", "none");
+// 			} else {
+// 				$(".firstPage").css("display", "block");
+// 		};
+// 	});
+// }
 
 // function homeBtn(){
 // 	$(".navbar-brand").on("click", function(){
