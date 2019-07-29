@@ -31,22 +31,22 @@ function showHeader(){
 }
 	
 
-// function homeBtn(){
-// 	var homeBtn = document.querySelector(".firstNav");
-// 		$(".navbar-brand").on("click", function(){
-// 			if(this !== homeBtn){
-// 				$(".firstPage").css("display", "none");
-// 			} else {
-// 				$(".firstPage").css("display", "block");
-// 		};
-// 	});
-// }
-
 function homeBtn(){
-	$(".navbar-brand").on("click", function(){
-		return (this == $(".firstNav") ? $(".firstPage").css)
-	})
+	var homeBtn = document.querySelector(".firstNav");
+		$(".navbar-brand").on("click", function(){
+			if(this !== homeBtn){
+				$(".firstPage").css("display", "none");
+			} else {
+				$(".firstPage").css("display", "block");
+		};
+	});
 }
+
+// function homeBtn(){
+// 	$(".navbar-brand").on("click", function(){
+// 		return (this == $(".firstNav") ? $(".firstPage").css)
+// 	})
+// }
 
 function slideShow(){
 	var headshots = document.getElementsByClassName('headshot');
