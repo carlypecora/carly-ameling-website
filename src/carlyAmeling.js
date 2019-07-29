@@ -14,14 +14,14 @@ function mapNavToPage(){
 		var clickedItem = this.text.toLowerCase()
 		var pages = document.querySelectorAll(".ameling")
 		for(var i = 0; i < pages.length; i++){
-			if (clickedItem === pages[i].id) {
+			if (clickedItem === "home"){
+				$(".firstPage").css("display", "block")
+				$(pages[i]).css("display", "none")
+			}
+			 else if (clickedItem === pages[i].id) {
 				$(pages[i]).css("display", "block")
 				$(".firstPage").css("display", "none")
-			} else {
-				console.log("here")
-				$("#home").css("display", "block")
-				$(pages[i]).css("display", "none")
-			};
+			} 
 		};
 	})
 }
