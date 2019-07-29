@@ -13,16 +13,17 @@ function mapNavToPage(){
 	$(".navbar-brand").on("click", function(){
 		var clickedItem = this.text.toLowerCase()
 		var pages = document.querySelectorAll(".ameling")
+		if(clickedItem === "home"){
+			$(".firstPage").css("display", "block")
+		}
 		for(var i = 0; i < pages.length; i++){
-			if (clickedItem === "home"){
-				console.log("clicked")
-				$(".firstPage").css("display", "block")
-				$(pages[i]).css("display", "none")
-			}
-			 else if (clickedItem === pages[i].id) {
+			if (clickedItem === pages[i].id) {
 				$(pages[i]).css("display", "block")
 				$(".firstPage").css("display", "none")
-			} 
+			} else {
+				$("#home").css("display", "block")
+				$(pages[i]).css("display", "none")
+			};
 		};
 	})
 }
