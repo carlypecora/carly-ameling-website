@@ -15,6 +15,7 @@ function mapNavToPage(){
 		var pages = document.querySelectorAll(".ameling")
 		for(var i = 0; i < pages.length; i++){
 			if (clickedItem === "home"){
+				console.log("clicked")
 				$(".firstPage").css("display", "block")
 				$(pages[i]).css("display", "none")
 			}
