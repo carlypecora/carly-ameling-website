@@ -18,8 +18,9 @@ function mapNavToPage(){
 				$(pages[i]).css("display", "block")
 				$(".firstPage").css("display", "none")
 			} else {
+				console.log("here")
+				$("#home").css("display", "block")
 				$(pages[i]).css("display", "none")
-				$(".firstPage").css("display", "block")
 			};
 		};
 	})
